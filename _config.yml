@@ -23,7 +23,7 @@ email: info@harmatkert.hu
 description: >- # this means to ignore newlines until "baseurl:"
   Tisztán, szívből, földből. Gyógynövények, teák és természetes termékek
   a Harmatkertből. Hagyományos tudás találkozik a modern életmóddal.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "harmatkert" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: hu
 
