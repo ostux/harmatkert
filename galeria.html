@@ -1,0 +1,13 @@
+---
+layout: page
+title: Fotógaléria
+---
+
+<div class="photo-grid">
+  {% for photo in site.data.gallery %}
+  <figure class="photo-card">
+    <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy">
+    <figcaption>{{ photo.caption }}</figcaption>
+  </figure>
+  {% endfor %}
+</div>

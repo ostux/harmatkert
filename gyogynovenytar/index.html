@@ -1,0 +1,13 @@
+---
+layout: page
+title: Gyógynövénytár
+javascript: true
+---
+
+<input type="text" id="search" placeholder="🔍 Keresés..." oninput="filterPlants()">
+
+<div class="plant-grid">
+  {% for plant in site.plants %}
+  {% include plant-card.html plant=plant %}
+  {% endfor %}
+</div>

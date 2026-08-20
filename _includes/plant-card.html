@@ -1,0 +1,12 @@
+<article class="plant">
+  <h3><a href="{{ include.plant.url | relative_url }}">{{ include.plant.title }}</a></h3>
+  {% if include.plant.latin %}
+  <p class="latin">{{ include.plant.latin }}</p>
+  {% endif %}
+  {% if include.plant.uses %}
+  <p><b>Felhasználás:</b> {{ include.plant.uses }}</p>
+  {% endif %}
+  {% if include.plant.excerpt %}
+  <p>{{ include.plant.excerpt | strip_html }}</p>
+  {% endif %}
+</article>

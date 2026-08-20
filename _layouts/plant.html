@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section>
+  <article class="plant">
+    <h3>{{ page.title }}</h3>
+    {% if page.latin %}
+    <p class="latin">{{ page.latin }}</p>
+    {% endif %}
+    {% if page.uses %}
+    <p><b>Felhasználás:</b> {{ page.uses }}</p>
+    {% endif %}
+
+    {{ content }}
+  </article>
+
+  <p><a href="{{ '/gyogynovenytar/' | relative_url }}">← Vissza a gyógynövénytárhoz</a></p>
+</section>

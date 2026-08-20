@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background with cream color (0.81x size, moved up 5%) -->
+  <circle cx="256" cy="214" r="204" fill="#fffdf7"/>
+
+  <!-- Inset shadow effect (inner circle with sage tint) -->
+  <circle cx="256" cy="214" r="181" fill="none" stroke="rgba(76, 107, 90, 0.08)" stroke-width="39"/>
+
+  <!-- Gold border -->
+  <circle cx="256" cy="214" r="204" fill="none" stroke="#c8a24a" stroke-width="8"/>
+
+  <!-- Water drop - moved down 10px total -->
+  <text x="256" y="148"
+        font-size="210"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="system-ui, -apple-system, sans-serif">💧</text>
+
+  <!-- Leaf - kept at original position -->
+  <text x="256" y="390"
+        font-size="210"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="system-ui, -apple-system, sans-serif">🌿</text>
+</svg>

@@ -1,0 +1,6 @@
+<div class="product">
+  <h3><a href="{{ include.product.url | relative_url }}">{{ include.product.title }}</a></h3>
+  {% if include.product.excerpt %}
+  <p>{{ include.product.excerpt | strip_html }}</p>
+  {% endif %}
+</div>

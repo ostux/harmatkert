@@ -1,0 +1,52 @@
+<nav>
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <img src="{{ '/assets/images/favicon.svg' | relative_url }}" alt="Harmatkert" width="40" height="40">
+    </a>
+
+    <button class="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links">
+      <a href="{{ '/galeria.html' | relative_url }}" {% if page.url == '/galeria.html' %}class="active"{% endif %}>Fotók</a>
+      <a href="{{ '/gyogynovenytar/' | relative_url }}" {% if page.url contains '/gyogynovenytar/' %}class="active"{% endif %}>Gyógynövénytár</a>
+      <a href="{{ '/termekek/' | relative_url }}" {% if page.url contains '/termekek/' %}class="active"{% endif %}>Terméklista</a>
+      <a href="{{ '/receptek.html' | relative_url }}" {% if page.url == '/receptek.html' %}class="active"{% endif %}>Receptek</a>
+      <a href="{{ '/cimke.html' | relative_url }}" {% if page.url == '/cimke.html' %}class="active"{% endif %}>Címke</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggle.addEventListener('click', function() {
+    const isOpen = navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('nav')) {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when clicking a link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+</script>

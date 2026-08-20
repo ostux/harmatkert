@@ -1,0 +1,35 @@
+// Harmatkert Color Variables
+$sage: #4c6b5a !default;
+$sage2: #6d8f7b !default;
+$cream: #f7f3e7 !default;
+$paper: #fffaf0 !default;
+$gold: #c8a24a !default;
+$brown: #735b39 !default;
+$ink: #2f3b31 !default;
+$soft: #e5d6ad !default;
+
+// Typography
+$base-font-family: Georgia, "Times New Roman", serif !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.6 !default;
+
+// Spacing
+$spacing-unit: 30px !default;
+
+// Colors
+$text-color: $ink !default;
+$background-color: $paper !default;
+$brand-color: $brown !default;
+
+// Breakpoints
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+$content-width: 800px !default;
+
+// Mixins
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}

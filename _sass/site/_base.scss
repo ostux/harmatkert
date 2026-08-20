@@ -1,0 +1,112 @@
+/**
+ * Reset and base styles
+ */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * Body styling with Harmatkert background
+ */
+body {
+  margin: 0;
+  font-family: $base-font-family;
+  color: $text-color;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 32%),
+              linear-gradient(180deg, #fbf7ee, #eadab6);
+  min-height: 100vh;
+}
+
+/**
+ * Typography
+ */
+h1 {
+  margin: 0;
+  font-size: clamp(46px, 10vw, 110px);
+  letter-spacing: 5px;
+  color: $sage;
+  line-height: 0.95;
+}
+
+h2 {
+  color: $sage;
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 0 0 14px;
+}
+
+h3 {
+  color: $brown;
+  margin-bottom: 4px;
+}
+
+/**
+ * Links
+ */
+a {
+  color: $ink;
+  text-decoration: none;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: block;
+}
+
+/**
+ * Forms
+ */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid #c9b783;
+  background: #fffdf7;
+  margin: 6px 0 12px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 95px;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: $sage;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}

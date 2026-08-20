@@ -1,0 +1,17 @@
+---
+layout: page
+title: Terméklista
+---
+
+<h3>2026 Nyári Gyűjtemény</h3>
+
+<div class="product-grid">
+  {% for product in site.products %}
+  {% include product-card.html product=product %}
+  {% endfor %}
+</div>
+
+<div class="product">
+  <h3>Készülőben</h3>
+  <p>Kakukkfűméz, hárs-kakukkfű szörp, körömvirágolaj, Napfény balzsam.</p>
+</div>

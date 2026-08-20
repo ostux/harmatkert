@@ -1,0 +1,13 @@
+---
+layout: page
+title: 🍯 Receptek
+---
+
+<div class="grid">
+  {% for recipe in site.data.recipes %}
+  <div class="note">
+    <h3>{{ recipe.name }}</h3>
+    <p>{{ recipe.description }}</p>
+  </div>
+  {% endfor %}
+</div>
