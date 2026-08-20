@@ -27,9 +27,24 @@ baseurl: "harmatkert" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 lang: hu
 
+# SEO Settings
+author: Harmatkert
+logo: /assets/images/favicon.svg
+social:
+  name: Harmatkert
+  links: []
+    # Add social media links here when available
+    # - https://facebook.com/harmatkert
+    # - https://instagram.com/harmatkert
+
+# Default image for social sharing
+defaults_image: /assets/images/gallery/harmatkert-termes.jpg
+
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Collections
 collections:

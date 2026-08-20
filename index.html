@@ -28,7 +28,7 @@ layout: default
     {% endfor %}
   </div>
   <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="/galeria.html" class="button">Összes kép megtekintése →</a>
+    <a href="{{ '/galeria.html' | relative_url }}" class="button">Összes kép megtekintése →</a>
   </div>
 </section>
 
@@ -38,7 +38,7 @@ layout: default
     {% assign latest_plants = site.plants | reverse | slice: 0, 6 %}
     {% for plant in latest_plants %}
     <article class="plant">
-      <h3><a href="{{ plant.url }}">{{ plant.title }}</a></h3>
+      <h3><a href="{{ plant.url | relative_url }}">{{ plant.title }}</a></h3>
       <p class="latin">{{ plant.latin }}</p>
       <p>{{ plant.content | strip_html | truncate: 80 }}</p>
       <p><strong>Felhasználás:</strong> {{ plant.uses }}</p>
@@ -46,7 +46,7 @@ layout: default
     {% endfor %}
   </div>
   <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="/gyogynovenytar/" class="button">Összes gyógynövény megtekintése →</a>
+    <a href="{{ '/gyogynovenytar/' | relative_url }}" class="button">Összes gyógynövény megtekintése →</a>
   </div>
 </section>
 
@@ -56,13 +56,13 @@ layout: default
     {% assign latest_products = site.products | reverse | slice: 0, 6 %}
     {% for product in latest_products %}
     <article class="product">
-      <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+      <h3><a href="{{ product.url | relative_url }}">{{ product.title }}</a></h3>
       <p>{{ product.content | strip_html | truncate: 120 }}</p>
     </article>
     {% endfor %}
   </div>
   <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="/termeklista/" class="button">Összes termék megtekintése →</a>
+    <a href="{{ '/termeklista/' | relative_url }}" class="button">Összes termék megtekintése →</a>
   </div>
 </section>
 

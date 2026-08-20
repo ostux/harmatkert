@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /robots.txt
+---
+# Harmatkert robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: {{ site.url }}/{{ site.baseurl }}/sitemap.xml
+
+# Disallow admin and config files
+Disallow: /assets/js/*.map
