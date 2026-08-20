@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'hu' }}">
 {% include head.html %}
-<body>
+<body{% if page.url contains '/cimke' %} class="cimke-page"{% endif %}>
   {% include navigation.html %}
 
   <main>
@@ -9,5 +9,18 @@
   </main>
 
   {% include footer.html %}
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <button class="modal-close" aria-label="Bezárás">&times;</button>
+    <button class="modal-prev" aria-label="Előző">&lsaquo;</button>
+    <button class="modal-next" aria-label="Következő">&rsaquo;</button>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+      <div id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/gallery-modal.js' | relative_url }}"></script>
 </body>
 </html>

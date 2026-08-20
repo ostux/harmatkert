@@ -15,7 +15,7 @@ $base-font-weight: 400 !default;
 $base-line-height: 1.6 !default;
 
 // Spacing
-$spacing-unit: 30px !default;
+$spacing-unit: 1.875rem !default; /* 30px */
 
 // Colors
 $text-color: $ink !default;
@@ -23,9 +23,9 @@ $background-color: $paper !default;
 $brand-color: $brown !default;
 
 // Breakpoints
-$on-palm: 600px !default;
-$on-laptop: 800px !default;
-$content-width: 800px !default;
+$on-palm: 37.5rem !default; /* 600px */
+$on-laptop: 50rem !default; /* 800px */
+$content-width: 50rem !default; /* 800px */
 
 // Mixins
 @mixin media-query($device) {

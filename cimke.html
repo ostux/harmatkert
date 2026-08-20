@@ -4,9 +4,10 @@ title: 🏷️ Harmatkert címkekészítő
 javascript: true
 ---
 
-<input id="labelPlant" placeholder="Növény neve">
-<input id="labelUse" placeholder="Felhasználás: tea / szörp / méz / olaj">
+<input id="labelPlant" placeholder="Növény neve" class="label-input">
+<input id="labelUse" placeholder="Felhasználás: tea / szörp / méz / olaj" class="label-input">
+<input id="labelCollector" placeholder="Gyűjtötte">
 <input id="labelYear" placeholder="Év">
-<button onclick="makeLabel()">Címke készítése</button>
+<button id="addLabelBtn" onclick="makeLabel()" disabled>Címke hozzáadása</button>
 <button class="no-print" onclick="window.print()">Nyomtatás</button>
-<div id="labelResult"></div>
+<div id="labelResult" class="label-grid"></div>

@@ -4,9 +4,72 @@ layout: default
 
 {% include header.html %}
 
-<section>
-  <h2>✨ Üdvözöllek a Harmatkertben!</h2>
-  <p>Itt minden növény kézzel gyűjtött, minden tea szeretettel készült, és minden termék a természet tisztaságát hordozza.</p>
+<section id="rolunk">
+  <h2>🌿 Harmatkert</h2>
+  <p class="intro">
+    A Harmatkert egy személyes, kézműves gyógynövényes világ: rétek, erdőszélek, hársak, kakukkfű, körömvirág és nyári illatok gyűjteménye.
+    Minden növény kézzel gyűjtve, gondosan válogatva és természetes módon szárítva kerül a gyűjteménybe.
+  </p>
+  <div class="quote">„A természet gyógyít. A szív megőriz. A lélek virágzik."</div>
 
-  <p>Nézz körül a <a href="{{ '/gyogynovenytar/' | relative_url }}">gyógynövénytárban</a>, tekintsd meg a <a href="{{ '/termekek/' | relative_url }}">termékeinket</a>, vagy fedezd fel a <a href="{{ '/receptek.html' | relative_url }}">receptjeinket</a>!</p>
 </section>
+
+
+
+<section id="galeria">
+  <h2>📷 Galéria</h2>
+  <div class="photo-grid">
+    {% assign latest_photos = site.data.gallery | reverse | slice: 0, 3 %}
+    {% for photo in latest_photos %}
+    <figure class="photo-card">
+      <img src="{{ photo.image }}" alt="{{ photo.alt }}" loading="lazy">
+      <figcaption>{{ photo.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="/galeria.html" class="button">Összes kép megtekintése →</a>
+  </div>
+</section>
+
+<section id="gyogynovenytar">
+  <h2>🌿 Gyógynövénytár</h2>
+  <div class="plant-grid">
+    {% assign latest_plants = site.plants | reverse | slice: 0, 6 %}
+    {% for plant in latest_plants %}
+    <article class="plant">
+      <h3><a href="{{ plant.url }}">{{ plant.title }}</a></h3>
+      <p class="latin">{{ plant.latin }}</p>
+      <p>{{ plant.content | strip_html | truncate: 80 }}</p>
+      <p><strong>Felhasználás:</strong> {{ plant.uses }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="/gyogynovenytar/" class="button">Összes gyógynövény megtekintése →</a>
+  </div>
+</section>
+
+<section id="termeklista">
+  <h2>🍵 Terméklista</h2>
+  <div class="product-grid">
+    {% assign latest_products = site.products | reverse | slice: 0, 6 %}
+    {% for product in latest_products %}
+    <article class="product">
+      <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+      <p>{{ product.content | strip_html | truncate: 120 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="/termeklista/" class="button">Összes termék megtekintése →</a>
+  </div>
+</section>
+
+<div class="warning">
+  <p><b>⚠️ Alapszabály:</b> csak azt használd belsőleg, amit teljes bizonyossággal felismertél.</p>
+
+  <p>Új gyógynövényt először kis mennyiségben próbálj ki. Gyógyszerszedés, várandósság, szoptatás, gyerekek vagy krónikus betegség esetén kérj szakmai tanácsot.</p>
+
+  <p>Az orbáncfű több gyógyszer hatását befolyásolhatja. A zsályát ne használd nagy mennyiségben vagy hosszú ideig.</p>
+</div>

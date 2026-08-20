@@ -1,0 +1,13 @@
+---
+layout: page
+title: Terméklista
+---
+
+<div class="product-grid">
+  {% for product in site.products %}
+  <article class="product">
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <p>{{ product.content | strip_html | truncate: 120 }}</p>
+  </article>
+  {% endfor %}
+</div>
